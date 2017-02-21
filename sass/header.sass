@@ -1,0 +1,239 @@
+@import bourbon
+@import "_fonts.sass"
+@import "_vars.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+	color: #222
+
+h1, .h2, h2, h3, h4, h5, h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h1
+	font-size: em(41px)
+	line-height: 1.2
+
+.h2, h2
+	font-size: em(32px)
+
+h3, h4
+	font-family: "OpenSansSemiBold", sans-serif
+	text-transform: uppercase
+	font-size: em(15px)
+
+h4
+	font-size: em(16px)
+
+a
+	color: $accent
+	outline: none !important
+
+.text-center
+	text-align: center
+
+.hidden
+	display: none
+
+b, strong
+	font-family: "OpenSansSemiBold", sans-serif
+	font-weight: normal
+
+.responsive-img
+	max-width: 100%
+
+.main-head
+	background-color: $bg-grey
+
+.search-wraper
+	padding: 5px 10px
+	margin: 10px auto
+	border-radius: 15px
+	background-color: $bg-input
+	p
+		margin: 0
+		padding: 0 5px
+		color: $white
+		font-size: em(18px)
+		.search-input
+			display: inline-block
+			width: 80%
+			color: $white
+			font-size: em(16px)
+			background-color: transparent
+			border-color: $bg-input
+			box-shadow: none
+		.head-button-wraper
+			float: right
+			display: inline-block
+			width: 20px
+			height: 20px
+			margin-top: 7px
+			font-size: em(20px)
+			background-color: $white
+			border-radius: 50%
+			button
+				margin-right: 4px
+
+/* Nav Bar */
+.md-nav-item
+	margin-right: 10px
+	margin-left: 0
+	border: 1px solid $grey-lines
+	border-bottom: 3px solid $white
+	border-radius: 4px
+	background-color: #fff
+.md-nav-item:first-of-type
+	margin-left: 0
+
+.navigation
+	padding: 15px 20px 5px
+	.md-nav-bar
+		border-color: $grey-lines
+		border-width: 0 0 1px
+		height: 50px
+		a
+			margin: 0 0
+			border-bottom: 1px solid $grey-lines
+			i
+				font-size: em(23px)
+		.md-active
+			border-bottom: none
+		.md-accent
+			color: $accent
+	md-nav-ink-bar
+		background-color: $white
+		color: $white
+
+
+.main-body
+	.info-row-wrap
+		color: $header-txt
+		padding: 5px 20px
+		font-size: em(24px)
+		a
+			color: $header-txt
+		a:hover, a:focus
+			text-decoration: none
+			color: $accent
+	.info-row-triangle
+		display: inline-block
+		position: relative
+		width: 5px
+		height: 10px
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			right: 0
+			@include triangle(10px, gray, down-right)
+
+.album-wraper
+	border-top: 1px solid $grey-lines
+	border-bottom: 1px solid $grey-lines
+	background-color: $bg-lite-grey
+	padding: 15px 0
+	+mt(0.2s)
+	a:hover, a:focus
+		text-decoration: none
+	.album-img-wrap
+		max-width: 200px
+		max-height: 180px
+		overflow: hidden
+	.album-list-txt-wrap
+		padding: 15px 0 10px
+	h4
+		color: $accent
+		vertical-align: middle
+		margin-bottom: 20px
+	p
+		font-size: em(14px)
+		color: $header-txt
+		margin-bottom: 5px
+	.arrows-wrap
+		display: block
+		position: relative
+		height: 100%
+		.arrows-detail
+			width: 100%
+			text-align: center
+			i
+				position: absolute
+				top: 50px
+				color: $accent
+				font-size: em(28px)
+.album-wraper:hover
+	background-color: darken($bg-lite-grey, 5%)			
+
+.album-detail-section-wrap
+	display: block
+	padding-top: 20px
+	border-top: 1px solid $grey-lines
+	.album-detail-body
+		display: block
+		width: 100%
+		height: 175px
+		background-color: $bg-lite-grey
+		border-radius: 5px
+		overflow: hidden
+		margin-bottom: 15px
+		border: 1px solid $grey-lines
+		.album-detail-img-wrap
+			max-width: 100%
+			max-height: 140px
+			height: 140px
+			overflow: hidden
+		.album-detail-txt
+			color: $accent
+			padding: 0 5px
+			span
+				text-decoration: underline
+		a
+			text-decoration: none
+
+.md-tooltip
+	height: auto
+	max-height: 50%
+	width: 97%
+	padding: 15px
+	text-overflow: clip!important
+	white-space: normal
+	p
+		color: white
+		font-size: 14px
+	div
+		display: inline-block
+		vertical-align: top
+		
+	.left-column
+		background-color: red
+	.right-column
+		background-color: purple
+		width: 30%
+
+.album-image-section-wrap, .upload-section-wrap
+	display: block
+	padding-top: 20px
+	border-top: 1px solid $grey-lines
+
+.image-info
+	margin-top: 15px
+	padding-left: 35px
+	color: $header-txt
+	.image-info-left
+		font-weight: bold
+	.image-info-right
+		.text-detail
+			margin-bottom: 0
+.keywords-class
+	padding: 3px 12px
+
+
+
+.sec-footer
+	padding-top: 25px
